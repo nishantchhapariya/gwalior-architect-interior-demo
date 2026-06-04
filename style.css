@@ -1,5 +1,5 @@
 /* ====================================================
-   Architecture Building Creator — Premium Interior Design
+   KSK & Associates — Architects & Interior Designers
    Mobile-First CSS Design System
    ==================================================== */
 
@@ -648,7 +648,7 @@ address { font-style: normal; }
 
 .trust-address-bar {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.625rem;
   padding: var(--space-md) var(--space-lg);
   background: var(--clr-bg-alt);
@@ -657,6 +657,13 @@ address { font-style: normal; }
   font-size: 0.875rem;
   color: var(--clr-text-muted);
   line-height: 1.5;
+  transition: border-color var(--transition-base), background var(--transition-base), box-shadow var(--transition-base);
+}
+
+.trust-address-bar:hover {
+  background: var(--clr-white);
+  border-color: var(--clr-gold-light);
+  box-shadow: var(--shadow-sm);
 }
 
 .trust-address-bar svg {
@@ -1234,6 +1241,34 @@ address { font-style: normal; }
 
 .cta-guarantee span::before { margin-right: 0.25em; }
 
+/* ===== LOCATION SECTION ===== */
+.location-section {
+  padding-block: var(--section-py);
+  background: var(--clr-bg);
+  text-align: center;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--clr-beige);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.map-container:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 350px;
+}
+
 /* ===== FOOTER ===== */
 .footer {
   background: #111009;
@@ -1427,7 +1462,8 @@ address { font-style: normal; }
   .why-card,
   .process-step,
   .testimonial-card,
-  .faq-item {
+  .faq-item,
+  .map-container {
     opacity: 0;
     transform: translateY(24px);
     transition-property: opacity, transform, box-shadow, border-color, background;
@@ -1441,7 +1477,8 @@ address { font-style: normal; }
   .why-card.visible,
   .process-step.visible,
   .testimonial-card.visible,
-  .faq-item.visible {
+  .faq-item.visible,
+  .map-container.visible {
     opacity: 1;
     transform: translateY(0);
   }
@@ -1582,6 +1619,11 @@ address { font-style: normal; }
   .cta-actions {
     flex-direction: row;
     justify-content: center;
+  }
+
+  /* Location Map */
+  .map-container iframe {
+    height: 480px;
   }
 }
 

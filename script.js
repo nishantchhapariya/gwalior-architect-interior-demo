@@ -1,5 +1,5 @@
 /* ===================================================
-   Architecture Building Creator — Interactive JS
+   KSK & Associates — Interactive JS
    Mobile-first, accessible, lightweight
    =================================================== */
 
@@ -105,7 +105,7 @@
 
   /* ─── SCROLL REVEAL (IntersectionObserver) ──── */
   const revealEls = $$(
-    '.trust-card, .service-card, .gallery-card, .why-card, .process-step, .testimonial-card, .faq-item'
+    '.trust-card, .service-card, .gallery-card, .why-card, .process-step, .testimonial-card, .faq-item, .map-container'
   );
 
   if ('IntersectionObserver' in window) {
@@ -208,6 +208,6 @@
   sections.forEach(section => sectionObserver.observe(section));
 
   /* ─── Done ───────────────────────────────────── */
-  console.log('%c Architecture Building Creator 🏛️ ', 'background:#2c2826;color:#c9a96e;font-size:1rem;padding:4px 8px;border-radius:4px;');
+  console.log('%c KSK & Associates 🏛️ ', 'background:#2c2826;color:#c9a96e;font-size:1rem;padding:4px 8px;border-radius:4px;');
 
 })();
