@@ -494,13 +494,11 @@ address { font-style: normal; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(20, 17, 14, 0.88) 0%,
-    rgba(20, 17, 14, 0.55) 40%,
-    rgba(20, 17, 14, 0.2) 70%,
-    rgba(20, 17, 14, 0.05) 100%
-  );
+  background: 
+    /* Darken left side where text sits for maximum readability */
+    linear-gradient(to right, rgba(15, 12, 10, 0.85) 0%, rgba(15, 12, 10, 0.4) 50%, transparent 100%),
+    /* Darken bottom-to-top */
+    linear-gradient(to top, rgba(15, 12, 10, 0.95) 0%, rgba(15, 12, 10, 0.6) 50%, rgba(15, 12, 10, 0.3) 100%);
 }
 
 .hero-content {
@@ -538,6 +536,7 @@ address { font-style: normal; }
   color: var(--clr-white);
   margin-bottom: 1.25rem;
   letter-spacing: -0.02em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-headline em {
@@ -547,10 +546,11 @@ address { font-style: normal; }
 
 .hero-sub {
   font-size: clamp(0.95rem, 2.5vw, 1.15rem);
-  color: rgba(255,255,255,0.82);
+  color: rgba(255,255,255,0.92);
   max-width: 52ch;
   line-height: 1.65;
   margin-bottom: 2rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
 }
 
 .hero-actions {
